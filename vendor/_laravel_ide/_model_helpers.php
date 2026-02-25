@@ -5,7 +5,23 @@ namespace App\Models {
 	/**
 	 * App\Models\Transaction
 	 *
+	 * @property \Illuminate\Support\Carbon|null $updated_at
+	 * @property \Illuminate\Support\Carbon|null $created_at
+	 * @property \Illuminate\Support\Carbon $date
+	 * @property string|null $description
+	 * @property \App\TransactionType $type
+	 * @property float $amount
+	 * @property int $wallet_id
+	 * @property int $id
 	 * @property-read \App\Models\Wallet $wallet
+	 * @method static \Illuminate\Database\Eloquent\Builder<Transaction>|Transaction whereId($value)
+	 * @method static \Illuminate\Database\Eloquent\Builder<Transaction>|Transaction whereWalletId($value)
+	 * @method static \Illuminate\Database\Eloquent\Builder<Transaction>|Transaction whereAmount($value)
+	 * @method static \Illuminate\Database\Eloquent\Builder<Transaction>|Transaction whereType($value)
+	 * @method static \Illuminate\Database\Eloquent\Builder<Transaction>|Transaction whereDescription($value)
+	 * @method static \Illuminate\Database\Eloquent\Builder<Transaction>|Transaction whereDate($value)
+	 * @method static \Illuminate\Database\Eloquent\Builder<Transaction>|Transaction whereCreatedAt($value)
+	 * @method static \Illuminate\Database\Eloquent\Builder<Transaction>|Transaction whereUpdatedAt($value)
 	 * @method static \Illuminate\Database\Eloquent\Builder<Transaction>|Transaction newModelQuery()
 	 * @method static \Illuminate\Database\Eloquent\Builder<Transaction>|Transaction newQuery()
 	 * @method static \Illuminate\Database\Eloquent\Builder<Transaction>|Transaction query()
@@ -660,10 +676,20 @@ namespace App\Models {
 	/**
 	 * App\Models\Wallet
 	 *
+	 * @property \Illuminate\Support\Carbon|null $updated_at
+	 * @property \Illuminate\Support\Carbon|null $created_at
+	 * @property string $name
+	 * @property int $user_id
+	 * @property int $id
 	 * @property-read mixed $balance
 	 * @property-read \App\Models\User $user
 	 * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Transaction> $transactions
 	 * @property-read int|null $transactions_count
+	 * @method static \Illuminate\Database\Eloquent\Builder<Wallet>|Wallet whereId($value)
+	 * @method static \Illuminate\Database\Eloquent\Builder<Wallet>|Wallet whereUserId($value)
+	 * @method static \Illuminate\Database\Eloquent\Builder<Wallet>|Wallet whereName($value)
+	 * @method static \Illuminate\Database\Eloquent\Builder<Wallet>|Wallet whereCreatedAt($value)
+	 * @method static \Illuminate\Database\Eloquent\Builder<Wallet>|Wallet whereUpdatedAt($value)
 	 * @method static \Illuminate\Database\Eloquent\Builder<Wallet>|Wallet newModelQuery()
 	 * @method static \Illuminate\Database\Eloquent\Builder<Wallet>|Wallet newQuery()
 	 * @method static \Illuminate\Database\Eloquent\Builder<Wallet>|Wallet query()
