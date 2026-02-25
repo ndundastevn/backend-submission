@@ -78,13 +78,15 @@ curl -X POST http://localhost:8000/api/users/1/wallets/1/transactions \
 
 Transaction `type` must be `income` or `expense`. `amount` must be positive. `description` and `date` are optional; `date` defaults to today.
 
-## Testing
+## Contributing
 
-```bash
-php artisan test --compact
-```
+Contributions are welcome! Please follow these steps:
 
-Feature tests cover user and wallet creation, transactions, profile and wallet views, and balance calculation.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
